@@ -9,4 +9,14 @@ else
     echo "You are root USER"
 fi
 
-yum install mysql
+yum install mysql -y 
+
+if [ $? -ne 0 ];
+then
+    echo "ERROR:: THE INSTALLATION IS FAILED"
+    exit 1
+else
+    echo "The installation is successfull"
+fi
+
+
