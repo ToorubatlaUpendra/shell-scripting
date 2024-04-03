@@ -1,8 +1,9 @@
 #!/bin/bash 
 
 NUMBER=$(id -u)
-if [ $NUMBER == 10 ]; then
-    echo "Proceed"
+if [ $NUMBER -ne 0 ]; 
+then
+    echo "ERROR : Please run script with rot user"
 else
-    echo "ERROR : Please run the script with roo access"
+    echo "You are root USER"
 fi
