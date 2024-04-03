@@ -7,3 +7,5 @@ then
 else
     echo "You are root USER"
 fi
+
+yum install mysql
