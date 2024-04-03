@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-NUMBER=$(ID -u)
+NUMBER=$(id -u)
 if [ $NUMBER == 10 ]; then
     echo "Proceed"
 else
