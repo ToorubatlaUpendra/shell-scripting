@@ -19,7 +19,7 @@ else
     echo "The installation is successfull"
 fi
 
-yum install git -y 
+um install git -y 
 
 if[ $? -ne 0 ];
 then
