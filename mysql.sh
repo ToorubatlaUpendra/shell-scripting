@@ -19,9 +19,9 @@ else
     echo "The installation is successfull"
 fi
 
-um install git -y 
+yum install git -y 
 
-if[ $? -ne 0 ];
+if [ $? -ne 0 ];
 then
     echo "GIT installation is failed"
     exit 1
