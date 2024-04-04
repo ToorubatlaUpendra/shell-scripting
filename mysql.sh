@@ -26,6 +26,6 @@ then
     echo "GIT installation is failed"
     exit 1
 else 
-    echo "installation is success"
+    echo "GIT installation is success"
 fi
 
