@@ -15,7 +15,7 @@ VALIDATE(){
         echo -e "ERROR:: $R THE $2 IS FAILED"
         exit 1
     else
-        echo -e "The $G $2 is successfull"
+        echo -e "The $G $2 is successfull $E"
     fi
 }
 if [ $NUMBER -ne 0 ]; 
