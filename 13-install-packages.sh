@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.sh"
 VALIDATE(){
     if [ $? -ne 0 ]
     then
@@ -18,13 +20,13 @@ else
 fi
 for PACKAGE in $@
 do
-    yum list installed $PACKAGE
+    yum list installed $PACKAGE &>> $LOGFILE
     if [ $? -ne 0 ]
     then
-        yum install $PACKAGE
+        yum install $PACKAGE &>> $LOGFILE
         VALIDATE $PACKAGE
         #echo "installing as new"
     else
-        echo "package is already installed"
+        echo "package is already installed" &&>> $LOGFILE
     fi
 done
