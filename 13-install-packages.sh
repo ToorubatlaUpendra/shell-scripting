@@ -10,9 +10,9 @@ LOGFILE="/tmp/$0-$TIMESTAMP.sh"
 VALIDATE(){
     if [ $? -ne 0 ]
     then
-        echo " $PACKAGE Installation is failed"
+        echo -e " $R $PACKAGE Installation is failed"
     else 
-        echo "  $PACKAGE Installation is success"
+        echo -e " $Y $PACKAGE Installation is success"
     fi 
 }
 if [ $ID -ne 0 ]
