@@ -10,5 +10,10 @@ else
 fi
 for PACKAGE in $@
 do
-    echo "$PACKAGE"
+    yum list installed $PACKAGE
+    if [ $? -ne 0 ]
+    then
+        yum install $PACKAGE
+    else
+        echo "package is already installed"
 done
