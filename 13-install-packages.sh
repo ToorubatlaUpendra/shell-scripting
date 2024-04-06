@@ -1,6 +1,13 @@
 #!/bin/bash
 
 ID=$(id -u)
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then
+        echo "Intsallation is failed"
+    else 
+        echo "Installation is success" 
+}
 if [ $ID -ne 0 ]
 then
     echo "Please login with root user"
@@ -14,7 +21,8 @@ do
     if [ $? -ne 0 ]
     then
         yum install $PACKAGE
-        echo "installing as new"
+        VALIDATE
+        #echo "installing as new"
     else
         echo "package is already installed"
     fi
