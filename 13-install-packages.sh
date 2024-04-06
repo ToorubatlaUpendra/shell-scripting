@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ID=$(id -u)
-R="\e[m32"
-Y="\e[m33"
-N="\e[m0"
+R="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.sh"
