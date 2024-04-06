@@ -1,6 +1,10 @@
 #!/bin/bash
 
 ID=$(id -u)
+R="\e[m32"
+Y="\e[m33"
+N="\e[m0"
+
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.sh"
 VALIDATE(){
@@ -13,10 +17,10 @@ VALIDATE(){
 }
 if [ $ID -ne 0 ]
 then
-    echo "Please login with root user"
+    echo -e "$RPlease login with root user$N"
     exit 1
 else
-    echo  "You are a root user"
+    echo -e "$GYou are a root user$N"
 fi
 for PACKAGE in $@
 do
@@ -27,6 +31,6 @@ do
         VALIDATE $PACKAGE
         #echo "installing as new"
     else
-        echo "package is already installed" &&>> $LOGFILE
+        echo -e "$Rpackage is already installed$N" &&>> $LOGFILE
     fi
 done
