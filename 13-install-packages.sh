@@ -4,9 +4,9 @@ ID=$(id -u)
 VALIDATE(){
     if [ $? -ne 0 ]
     then
-        echo "Intsallation is failed"
+        echo " $PACKAGE Installation is failed"
     else 
-        echo "Installation is success"
+        echo "  $PACKAGE Installation is success"
     fi 
 }
 if [ $ID -ne 0 ]
@@ -22,7 +22,7 @@ do
     if [ $? -ne 0 ]
     then
         yum install $PACKAGE
-        VALIDATE
+        VALIDATE $PACKAGE
         #echo "installing as new"
     else
         echo "package is already installed"
