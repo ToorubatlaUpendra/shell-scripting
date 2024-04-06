@@ -16,4 +16,5 @@ do
         yum install $PACKAGE
     else
         echo "package is already installed"
+    fi
 done
