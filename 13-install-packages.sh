@@ -6,7 +6,8 @@ VALIDATE(){
     then
         echo "Intsallation is failed"
     else 
-        echo "Installation is success" 
+        echo "Installation is success"
+    fi 
 }
 if [ $ID -ne 0 ]
 then
