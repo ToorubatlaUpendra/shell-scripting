@@ -8,3 +8,7 @@ then
 else
     echo  "You are a root user"
 fi
+for PACKAGE in $@
+do
+    echo "$PACKAGE"
+done
