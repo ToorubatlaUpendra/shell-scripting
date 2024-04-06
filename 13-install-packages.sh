@@ -17,10 +17,10 @@ VALIDATE(){
 }
 if [ $ID -ne 0 ]
 then
-    echo -e "$RPlease login with root user$N"
+    echo -e "$R Please login with root user$N"
     exit 1
 else
-    echo -e "$GYou are a root user$N"
+    echo -e "$G You are a root user$N"
 fi
 for PACKAGE in $@
 do
@@ -31,6 +31,6 @@ do
         VALIDATE $PACKAGE
         #echo "installing as new"
     else
-        echo -e "$Rpackage is already installed$N" &&>> $LOGFILE
+        echo -e "$R package is already installed $N" &&>> $LOGFILE
     fi
 done
