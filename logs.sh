@@ -12,15 +12,15 @@ echo "Script name : $0"
 VALIDATE(){
     if [ $1 -ne 0 ];
     then
-        echo "ERROR:: $R THE $2 IS FAILED"
+        echo -e "ERROR:: $R THE $2 IS FAILED"
         exit 1
     else
-        echo "The $G $2 is successfull"
+        echo -e "The $G $2 is successfull"
     fi
 }
 if [ $NUMBER -ne 0 ]; 
 then
-    echo "$R ERROR $E: Please run script with rot user"
+    echo -e "$R ERROR $E: Please run script with rot user"
     exit 1 
 else
     echo "You are root USER"
