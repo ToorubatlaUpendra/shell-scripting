@@ -8,11 +8,12 @@ N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.sh"
 VALIDATE(){
+    echo "$?"
     if [ $? -ne 0 ]
     then
-        echo -e " $R $PACKAGE Installation is failed"
+        echo -e " $R $PACKAGE Installation is failed $N"
     else 
-        echo -e " $Y $PACKAGE Installation is success"
+        echo -e " $Y $PACKAGE Installation is success $N"
     fi 
 }
 if [ $ID -ne 0 ]
