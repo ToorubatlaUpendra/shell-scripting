@@ -8,7 +8,7 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "Script name : $0"
-
+echo "Scripted started execution at $TIMESTAMP" &> $LOGFILE
 VALIDATE(){
     if [ $1 -ne 0 ];
     then
