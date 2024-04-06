@@ -14,6 +14,7 @@ do
     if [ $? -ne 0 ]
     then
         yum install $PACKAGE
+        echo "installing as new"
     else
         echo "package is already installed"
     fi
