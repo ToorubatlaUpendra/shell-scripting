@@ -10,10 +10,10 @@ do
     echo "$usage"
     Partion=$(echo $line  | awk '{print $6}')
     echo "$Partion"
-    # if [ $usage -ge $THRESHOLD ]
-    # then
-    #     message+="High usage on the disk $Partion:$usage"
-    # else
-    #     echo "usage is below threshold"
-    # fi
+    if [ $usage -ge $THRESHOLD ]
+    then
+        message+="High usage on the disk $Partion:$usage"
+    else
+        echo "usage is below threshold"
+    fi
 done <<< $DISKUSAGE
