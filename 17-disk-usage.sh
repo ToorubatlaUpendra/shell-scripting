@@ -10,7 +10,7 @@ do
     Partion=$(echo $line  | awk '{print $6}')
     if [ $usage -ge $THRESHOLD ]
     then
-        message+="High usage on the disk $Partion:$usage/n"
+        message+="High usage on the disk $Partion:$usage\n"
     else
         echo "usage is below threshold"
     fi
