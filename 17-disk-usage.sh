@@ -3,7 +3,7 @@
 DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
 echo "$DISKUSAGE"
 THRESHOLD=1%
-while IFS= read -r line 
+while IFS= read line 
 do 
     echo "$line"
 done < $DISKUSAGE 
