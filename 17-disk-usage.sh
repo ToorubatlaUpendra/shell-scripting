@@ -5,6 +5,5 @@ echo "$DISKUSAGE"
 THRESHOLD=1%
 while IFS= read -r line 
 do 
-     message+=$("$line  | awk '{print $5}')
-     echo "$message"
+    echo "$line"
 done < $DISKUSAGE 
