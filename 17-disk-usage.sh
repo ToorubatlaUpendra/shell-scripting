@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File' | awk '{print $6}' | cut -d % -f1)
+DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
 # echo "$DISKUSAGE"
 THRESHOLD=0
 
