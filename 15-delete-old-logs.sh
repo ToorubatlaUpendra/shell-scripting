@@ -3,7 +3,7 @@
 R="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-SOURCE_DIR="/tmp/shell-scripting"
+SOURCE_DIR="/tmp/shell-scripting/"
 if [ ! -d "$SOURCE_DIR" ]; then
   echo -e"$R$SOURCE_DIR does exist.$N"
 fi
@@ -13,5 +13,6 @@ filename="sample.txt"
 
 while IFS= read -r line
 do
-   echo $line
+   echo "DELETING FILE LINE BY LINE:$line"
+
 done <<< "$FILES_TO_DELETE"
