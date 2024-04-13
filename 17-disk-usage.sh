@@ -14,7 +14,7 @@ do
     then
         message+="High usage on the disk $Partion:$usage\n" #for over writing
     fi
-done <<< $DISKUSAGE #content we are pushing so we are using <<< 
+done <<< "$DISKUSAGE" #content we are pushing so we are using <<< 
 
 # echo -e "$message" | mail -s "Alert" toorubatlaupendra@gmail.com
 
