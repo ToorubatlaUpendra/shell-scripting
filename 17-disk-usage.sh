@@ -2,7 +2,7 @@
 
 DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
 # echo "$DISKUSAGE"
-THRESHOLD=1
+THRESHOLD=30
 while IFS= read line 
 do 
     usage=$(echo $line  | awk '{print $6}' | cut -d % -f1)
@@ -15,4 +15,4 @@ do
     fi
 done <<< $DISKUSAGE
 
-echo -e "$message"
+echo -e "$message" | mail -s "Alert" toorubatlaupendra@gmail.com
