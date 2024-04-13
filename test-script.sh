@@ -31,6 +31,6 @@ do
     else
         echo "usage is below threshold"
     fi
-done < $DISKUSAGE
+done <<< $DISKUSAGE
 
 echo -e "$message"
