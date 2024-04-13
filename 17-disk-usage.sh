@@ -7,7 +7,7 @@ while IFS= read  line
 do 
     echo "$line"
     usage=$(echo $line  | awk '{print $6}' | cut -d % -f1)
-    echo "$usage"
+    # echo "$usage"
     Partion=$(echo $line  | awk '{print $1}')
     # echo "$Partion"
     if [ $usage -ge $THRESHOLD ]
