@@ -14,4 +14,4 @@ while IFS=":" read -r USER_NAME PSSWORD USER_ID GROUP_ID USER_ID_INFO HOME_DIREC
 do 
     echo "$USER_NAME $PSSWORD "
 
-done <<< $FILE
+done < $FILE
