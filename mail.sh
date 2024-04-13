@@ -1,5 +1,6 @@
 #!/bin/bash
 To_Team=$1
+echo "$To_Team"
 Alert_Type=$2
 BODY=$3
 TO_ADDRESS=$4
