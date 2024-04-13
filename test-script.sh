@@ -4,7 +4,7 @@ R="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 FILE="/etc/passwd"
-echo "$FILE"
+# echo "$FILE"
 if [ ! -d "$FILE" ] 
 then
   echo -e "$R$SOURCE_DIR does exist.$N"
