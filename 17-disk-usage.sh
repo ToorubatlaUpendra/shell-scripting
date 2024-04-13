@@ -12,7 +12,7 @@ do
     # echo "$Partion"
     if [ $usage -ge $THRESHOLD ]
     then
-        message+="High usage on the disk $Partion:$usage <br>" #for over writing
+        message+="High usage on the disk $Partion:$usage <br>" #br for new line in html#for over writing
     fi
 done <<< "$DISKUSAGE" #content we are pushing so we are using <<< here use qoutes otherwise it will take as single line
 
