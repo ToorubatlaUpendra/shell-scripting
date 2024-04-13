@@ -14,9 +14,9 @@ do
     then
         message+="High usage on the disk $Partion:$usage\n" #for over writing
     fi
-done <<< "$DISKUSAGE" #content we are pushing so we are using <<< 
+done <<< "$DISKUSAGE" #content we are pushing so we are using <<< here use qoutes otherwise it will take as single line
 
 # echo -e "$message" | mail -s "Alert" toorubatlaupendra@gmail.com
 
-echo "$message"
-# sh mail.sh "Devops Team" "High Disk Usage" "$message" "toorubatlaupendra@gmail.com" "Alert High Disk Usage"
+# echo "$message"
+ sh mail.sh "Devops Team" "High Disk Usage" "$message" "toorubatlaupendra@gmail.com" "Alert High Disk Usage"
