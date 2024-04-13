@@ -1,14 +1,18 @@
 #!/bin/bash
 
-OPTSTRING=":ab"
+OPTSTRING=":x:y:"
 
 while getopts ${OPTSTRING} opt; do
   case ${opt} in
-    a)
-      echo "Option -a was triggered."
+    x)
+      echo "Option -x was triggered, Argument: ${OPTARG}"
       ;;
-    b)
-      echo "Option -b was triggered."
+    y)
+      echo "Option -y was triggered, Argument: ${OPTARG}"
+      ;;
+    :)
+      echo "Option -${OPTARG} requires an argument."
+      exit 1
       ;;
     ?)
       echo "Invalid option: -${OPTARG}."
