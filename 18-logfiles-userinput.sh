@@ -40,7 +40,7 @@ if [[ -z "$mandatory_arg1" || -z "$mandatory_arg2" ]]; then
     usage
     if [ $mandatory_arg2="archieve" ]
     then
-        if [[ -z "$optional_arg1" ]]
+        if [ -z "$optional_arg1" ]
         then
             echo "Mandatory argument -d is required."
             usage
