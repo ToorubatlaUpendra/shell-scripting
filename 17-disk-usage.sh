@@ -13,6 +13,8 @@ do
     else
         echo "usage is below threshold"
     fi
-done <<< $DISKUSAGE
+done <<< $DISKUSAGE #content we are pushing so we are using <<< 
 
-echo -e "$message" | mail -s "Alert" toorubatlaupendra@gmail.com
+# echo -e "$message" | mail -s "Alert" toorubatlaupendra@gmail.com
+
+sh mail.sh "Devops Team" "High Disk Usage" "$message" "toorubatlaupendra@gmail.com" "Alert High Disk Usage"
