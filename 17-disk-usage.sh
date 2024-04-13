@@ -2,7 +2,7 @@
 
 DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
 # echo "$DISKUSAGE"
-THRESHOLD=30
+THRESHOLD=10
 while IFS= read line 
 do 
     usage=$(echo $line  | awk '{print $6}' | cut -d % -f1)
