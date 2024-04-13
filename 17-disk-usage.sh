@@ -1,14 +1,14 @@
 #!/bin/bash 
 
 DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
-echo "$DISKUSAGE"
+# echo "$DISKUSAGE"
 THRESHOLD=10
 while IFS= read line 
 do 
     usage=$(echo $line  | awk '{print $6}' | cut -d % -f1)
     echo "$usage"
     Partion=$(echo $line  | awk '{print $1}')
-    echo "$Partion"
+    # echo "$Partion"
     if [ $usage -ge $THRESHOLD ]
     then
         message+="High usage on the disk $Partion:$usage\n" #for over writing
