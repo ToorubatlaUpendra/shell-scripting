@@ -5,7 +5,7 @@ DISKUSAGE=$(df -Th | grep -vE 'tmpfs|File')
 THRESHOLD=10
 while IFS= read  line 
 do 
-    echo "$line"
+    # echo "$line"
     usage=$(echo $line  | awk '{print $6}' | cut -d % -f1)
     # echo "$usage"
     Partion=$(echo $line  | awk '{print $1}')
