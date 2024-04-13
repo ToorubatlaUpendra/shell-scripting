@@ -7,22 +7,22 @@ optional_arg3=""
 
 # Function to display usage
 usage() {
-    echo "Usage: $0 -a <arg1> -b <arg2> [-c <arg3>] [-d <arg4>] [-e <arg5>]"
+    echo "Usage: $0 -s <arg1> -a <arg2> [-d <arg3>] [-t <arg4>] [-m <arg5>]"
     exit 1
 }
 
 # Use getopts to parse options
-while getopts ":a:b:c:d:e:" opt; do
+while getopts ":s:a:d:t:m:" opt; do
     case ${opt} in
-        a ) mandatory_arg1="$OPTARG"
+        s ) mandatory_arg1="$OPTARG"
             ;;
-        b ) mandatory_arg2="$OPTARG"
+        a ) mandatory_arg2="$OPTARG"
             ;;
-        c ) optional_arg1="$OPTARG"
+        d ) optional_arg1="$OPTARG"
             ;;
-        d ) optional_arg2="$OPTARG"
+        t ) optional_arg2="$OPTARG"
             ;;
-        e ) optional_arg3="$OPTARG"
+        m ) optional_arg3="$OPTARG"
             ;;
         \? ) echo "Invalid option: $OPTARG" 1>&2
              usage
@@ -36,8 +36,15 @@ shift $((OPTIND -1))
 
 # Check for mandatory arguments
 if [[ -z "$mandatory_arg1" || -z "$mandatory_arg2" ]]; then
-    echo "Mandatory arguments -a and -b are required."
+    echo "Mandatory arguments -s and -a are required."
     usage
+    if [ $mandatory_arg2="archieve" ]
+    then
+        if [[ -z "$optional_arg1" ]]
+        then
+            echo "Mandatory argument -d is required."
+            usage
+        fi
 fi
 
 # Output the values
