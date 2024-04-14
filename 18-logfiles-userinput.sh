@@ -48,7 +48,7 @@ while getopts "s:a:d:t:m:" opt; do
 done
 shift $((OPTIND -1))
 
-if [ -z "$arg1" || -z "$arg2" ]  #-z check chesthadhi length of string if zero aythe true 
+if [[ -z "$arg1" || -z "$arg2" ]]  #-z check chesthadhi length of string if zero aythe true 
 then
     echo "usage:$0  -s <arg1>"
     exit 1
