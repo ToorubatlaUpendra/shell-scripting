@@ -9,12 +9,12 @@
 Third_Option=false #intial ga false ani thesukuntunna 
 Third_option_arg="" #intal ga arugment value kuda empty string thesukunta 
 usage() {
-    echo "usage:$0  -s <arg1> -a <arg2>  -d <arg3>  -t  <arg4> -m <arg5>"
+    echo "usage:$0  -s <arg1> -a <arg2>  -d <delete/archieve>  -t  <arg4> -m <arg5>"
     exit 1
 }
 while getopts ":s:a:d:t:m" opt; do
   case ${opt} in
-    s )
+    s )  
       arg1=$OPTARG
       ;;
     a )
