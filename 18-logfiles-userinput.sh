@@ -4,7 +4,7 @@
 # 1)providing the required arguments
 # 2)correct ga options esthunana ledha and options ki ayrgument esthunana ledha
 # 3)making two arguments as mandotory
-4)
+# 4)
 while getopts ":s:a:d:t:m" opt; do
   case ${opt} in
     s )
