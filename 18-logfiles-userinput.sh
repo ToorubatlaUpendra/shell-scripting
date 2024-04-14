@@ -19,10 +19,11 @@ while getopts ":s:a:d:t:m:" opt; do
       ;;
     a )
       arg2=$OPTARG
-      if [ "$arg2"="archieve" ]
+      if [[ "$arg2" = "archieve" ]]
       then
-        Third_Option=True
-      fi 
+         Third_Option=true
+      fi
+
       ;;
     d )
       Third_option_arg=$OPTARG
@@ -54,7 +55,7 @@ then
     exit 1
 fi
 
-if [ "$Third_Option"=True && -z "$Third_option_arg" ]
+if [[ $Third_Option=true && -z "$Third_option_arg" ]]
 then
     echo "My third option $Third_option_arg is mandotory"
     echo "usage:$0  -s <arg1>"
