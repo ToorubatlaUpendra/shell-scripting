@@ -12,7 +12,7 @@ usage() {
     echo "usage:$0  -s <arg1> -a <arg2>  -d <delete/archieve>  -t  <arg4> -m <arg5>"
     exit 1
 }
-while getopts ":s:a:d:t:m" opt; do
+while getopts ":s:a:d:t:m:" opt; do
   case ${opt} in
     s )  
       arg1=$OPTARG
