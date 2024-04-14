@@ -5,6 +5,11 @@
 # 2)correct ga options esthunana ledha and options ki ayrgument esthunana ledha
 # 3)making two arguments as mandotory
 # 4)
+
+usage() {
+    echo "usage:$0  -s <arg1> -a <arg2>  -d <arg3>  -t  <arg4> -m <arg5>"
+    exit 1
+}
 while getopts ":s:a:d:t:m" opt; do
   case ${opt} in
     s )
@@ -25,10 +30,12 @@ while getopts ":s:a:d:t:m" opt; do
 
     \? )
       echo "Invalid option: $OPTARG"  #this will though error if we give any wrong option
+      usage
       exit 1
       ;;
     : )
       echo "Option -$OPTARG requires an argument." #it will tell this requires an argument 
+      usage
       exit 1
       ;;
   esac
