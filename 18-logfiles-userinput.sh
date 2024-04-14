@@ -1,9 +1,21 @@
 #!/bin/bash
 
-while getopts :a:b: options; do 
-    case $options in 
-        a) ap=$OPTARG;;
-        b) bo=$OPTARG;;
-    esac
+while getopts ":a:b:" opt; do
+  case ${opt} in
+    a )
+      arg1=$OPTARG
+      ;;
+    b )
+      arg2=$OPTARG
+      ;;
+    \? )
+      echo "Invalid option: $OPTARG"
+      exit 1
+      ;;
+    : )
+      echo "Option -$OPTARG requires an argument."
+      exit 1
+      ;;
+  esac
 done
-echo "Option A = $ap and option B= $bo"
+shift $((OPTIND -1))
