@@ -20,3 +20,5 @@ done <<< "$DISKUSAGE" #content we are pushing so we are using <<< here use qoute
 
 # echo "$message"
  sh mail.sh "Devops Team" "High Disk Usage" "$message" "toorubatlaupendra@gmail.com" "Alert High Disk Usage"
+
+

@@ -54,7 +54,7 @@ then
     exit 1
 fi
 
-if [ "$Third_Option"=True && -z $Third_option_arg ]
+if [ "$Third_Option"=True && -z "$Third_option_arg" ]
 then
     echo "My third option $Third_option_arg is mandotory"
     echo "usage:$0  -s <arg1>"
