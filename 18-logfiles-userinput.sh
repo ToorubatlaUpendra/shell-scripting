@@ -37,6 +37,6 @@ shift $((OPTIND -1))
 
 if [ -z "$arg1" ]
 then
-    echo "usage:$0  -a <arg1>"
+    echo "usage:$0  -s <arg1>"
     exit 1
 fi
