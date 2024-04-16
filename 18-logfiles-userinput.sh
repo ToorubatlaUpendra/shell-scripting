@@ -50,7 +50,7 @@ shift $((OPTIND -1))
 
 if [[ -z "$arg1" || -z "$arg2" ]]  #-z check chesthadhi length of string if zero aythe true 
 then
-    echo "usage:$0  -s <arg1>"
+    echo "$arg1 "
     exit 1
 fi
 
